@@ -1,5 +1,6 @@
 import React from "react";
-import "./Wallets.css";
+import "./onewallet.css";
+import { Row, Col, Container } from "react-bootstrap";
 
 export default function OneWallet(wallet) {
  
@@ -12,19 +13,21 @@ export default function OneWallet(wallet) {
   };
 
   return (
-    <div className="item">
-      <div className="props">
+    <Container id="onewalletcont">
+    <div id="onewalletrow" >
+      <div className="walletcol" >
         <h5>{wallet.type}</h5>
       </div>
-      <div className="props">
+      <div className="walletcol" >
         <h5>{wallet.currency}</h5>
       </div>
-      <div className="props">
+      <div className="walletcol" >
         <h5>{moneda[wallet.currency]}{wallet.balance}</h5>
       </div>
-      <div className="props">
+      <div className="walletcol" >
         <h5>{wallet.created}</h5>
       </div>
     </div>
+    </Container>
   );
 }
